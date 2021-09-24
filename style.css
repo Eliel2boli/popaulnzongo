@@ -1,0 +1,335 @@
+*
+{
+    box-sizing: border-box;
+}
+/* ":root{--xxx:}" c'est la syntaxe de définition des variables */
+:root{
+    --color1:#09bac7;
+    --color2: white;
+    --color3: #F4F4F4;
+   
+}
+body{
+    margin: 0;
+    font-family: Arial;
+    line-height: 1.5; /*Pour l'espacement inter-lignes*/
+}
+iframe{
+    width: 100%;
+    border: none;
+    height: 350px;
+}
+
+div.cover{
+    background:url(cover_overlay.png)no-repeat center/100% 100%, url(cover.jpg)no-repeat center/cover;
+    height: 360px;
+    position: relative;
+    /* Pour plus d'info sur le background en CSS, voir sur google*/
+}
+
+img.cover-profile{
+    height: 100px;
+    position: relative;
+    left: 50%;
+    margin-left:-50px;
+    top: 30px;
+}
+h1{
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+    font-size: 42px;
+    margin-bottom: 0px;
+}
+div.cover p{
+    text-align: center;
+    color: lightgray;
+    margin-top: 4px;
+    margin-bottom:4px;
+    font-size: 16px;
+
+}
+div.cover-contact {
+    position:absolute ;/*il faut que la div parent soit en  relative pour que la position absolute fontionne*/
+    top:20px;
+    left:10px;
+    border-left: 4px solid var(--color1);
+    padding-left: 8px;
+    
+ 
+}
+div.cover-contact p{
+    text-align: left;
+    margin-top: 0px; 
+    margin-bottom: 0px  ;
+}
+div.cover-contact p:first-child{/* pour selection le premier élement d'une div*/
+    margin-bottom: 10px  ;
+}
+
+div.cover-contact a {
+    color: var(--color2);
+    font-size: 14px;  
+}
+a.cover-button{
+    color:var(--color1);
+    border: 2px solid var(--color1);
+    padding: 10px;
+    text-decoration: none;
+    background-color: #00000040;
+    display: inline-block;
+    margin-top: 18px;
+    font-size: 14px;
+}
+a.cover-button-portfolio{
+    position: absolute;
+    right: 20px; 
+    top: 4px;
+}
+a.cover-button:hover{ /*hover c pr mettre en surbrillance lors du passager du pointeur*/
+    color:var(--color2) ;
+    border: 2px solid var(--color2);
+}
+
+.section{ /* Ceci est une propriété commune c-à-d toutes les section auront 40px de padding dans les côtés*/
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    overflow: auto;/*Gerer le overflow pour toutes les sections*/
+}
+
+div.section-grise1{
+    background: url(triangle2white.svg) no-repeat center bottom/ 100% ;
+    background-color: var(--color3);
+    height: 200px;
+    padding-bottom:50px;/*Ici on ne garde que le padding bottom car le reste est déjà defini dans "section"*/
+    padding-top: 10px;
+}
+
+div.section-grise2{
+    background: url(triangle1white.svg) no-repeat center top/ 100% ;
+    background-color: var(--color3);
+    height: 100%;
+    padding-top:80px;/*Ici on ne garde que le padding top car le reste est déjà defini dans "section"*/
+}
+h2{
+    text-align: center;
+    font-size: 34px;
+    margin-top: 0px;
+}
+div.separateur{
+    height: 1px;
+    width: 150px;
+    background-color: var(--color1);
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    margin-left: -75px
+}
+
+div.section-grise1 p{
+    font-size: 22px;
+    color: #656565;
+    text-align: center;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    position: relative;
+
+}
+
+img.col-contenu{
+    width: 40%;
+}
+div.col-contenu{
+    width: 60%;
+    padding-left: 16px; 
+}
+.float-right{
+    float: right;
+    
+}
+
+div.texte-avec-ligne-verticale{
+    border-left: 5px solid var(--color1);
+    padding-left: 8px;
+    height: 50px;
+    display: inline-block;
+   
+}
+div.texte-avec-ligne-verticale p{
+    margin-top: 0;
+}
+div.barre-verticale{
+    height: 50px;
+    width: 4px;
+    background-color:var(--color1);
+    margin-right: 8px;
+}
+table.portfolio-colonne1{
+display: inline-block;
+
+    
+}
+
+table.portfolio-colonne2{
+    float: right;
+  
+}
+
+.col-portfolio{
+    width: 47%;
+   
+  
+}
+div.frame{
+    margin: 30px 50px;
+    padding: 20px 30px;
+    background-color: white;
+    box-shadow: 0px 0px 8px 8px rgba(0,0, 0, 0.1);
+}
+p.frame-title{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+div.frame img{
+    width: 100px;
+}
+
+/*PORTFOLIO*/
+
+.portfolio-header{
+    height: 90px;
+    background:url(header.jpg)no-repeat center/cover
+
+}
+.portfolio-header-title{
+    color: white; 
+    font-weight: bold;
+    font-size: 26px;
+    padding-top: 4px;
+    padding-left: 8px;
+    position: relative;
+}
+h1.portfolio{
+    color: black; 
+    margin-top:0px; 
+    font-size: 46px;
+    line-height: 1;
+}
+h2.portfolio{
+    font-size: 26px; 
+    font-weight:normal;
+    margin-bottom: 0;
+}
+.portfolio-back{
+    position: absolute;
+    top: 110px;
+    left: 16px;
+}
+img.portfolio{
+    width:70%;
+    max-width: 475px;
+    margin-top: 30px;
+}
+.display-mobile{
+    display: none;
+}
+/* RESPONSIVE DESIGN* (@ ECRANS MOBILE)*/
+
+@media only screen and (max-width: 767px) {
+/*COVER*/
+img.cover-profile{
+    height: 90px;
+    top:5px;
+    margin-top: 75px;
+}
+h1{
+    margin-top: 6px;
+    font-size: 33px;
+    margin-bottom: 0px;
+}
+div.cover p{
+    margin-top: 2px;
+    margin-bottom:2px;
+    font-size: 13px;
+}
+/*SECTION GRISE1*/
+.section{ /* Ceci est une propriété commune c-à-d toutes les section auront 40px de padding dans les côtés*/
+    padding-left: 20px;
+    padding-right: 20px; 
+    padding-top: 20px;
+}
+
+div.section-grise1{
+    padding-bottom:40px;
+}
+h2{
+    font-size: 28px;
+}
+
+/*LES COLONNES*/
+
+img.col-contenu{
+    width: 100%;
+}
+div.col-contenu{
+    width: 100%;
+    padding-left: 0px; 
+    margin-top: 20px;
+}
+.col-portfolio{
+    width: 100%;
+}
+/*FRAME*/
+div.frame{
+    margin:0px;
+    padding:0px;
+    box-shadow: none;  
+}
+p.frame-title{
+    font-size: 16px;
+    margin-bottom: 1px;
+}
+
+div.frame img{
+    width: 70px;
+}
+/*PORTFOLIO-SITE RESTAU*/
+
+.portfolio-header-title{
+    font-size: 18px;
+    padding-top: 8px;
+    padding-left: 4px;
+ 
+}
+a.cover-button{
+    padding: 7px 15PX;
+    margin-top: 22px;
+    font-size: 12px;
+}
+a.cover-button-portfolio{
+    
+    right: 5px; 
+}  
+/* PORTFOLIO: ADAPTATIONS GENERALES*/
+h1.portfolio{
+    font-size: 38px;
+   
+}
+h2.portfolio{
+    font-size: 21px; 
+ 
+}
+img.portfolio{
+    width:100%;
+}
+.display-mobile{
+    display: block;
+}
+ }
